@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Google Maps - gmplot</title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyAleTYEbLkmEuAAASzb-nTepZeo7tErzhc"></script>
+<script type="text/javascript">
+    function initialize() {
+        var map = new google.maps.Map(document.getElementById("map_canvas"), {
+            zoom: 14,
+            center: new google.maps.LatLng(23.761499, 90.430431)
+        });
+
+        new google.maps.Polygon({
+            clickable: false,
+            geodesic: true,
+            fillColor: "#000000",
+            fillOpacity: 0.300000,
+            strokeColor: "#000000",
+            strokeOpacity: 1.000000,
+            strokeWeight: 1,
+            map: map,
+            paths: [
+                new google.maps.LatLng(23.761499, 90.430431),
+                new google.maps.LatLng(23.763741, 90.431335),
+                new google.maps.LatLng(23.766818, 90.424436),
+                new google.maps.LatLng(23.767113, 90.424038),
+                new google.maps.LatLng(23.767356, 90.422620),
+                new google.maps.LatLng(23.767705, 90.422959),
+                new google.maps.LatLng(23.798153, 90.423393),
+                new google.maps.LatLng(23.800229, 90.422969),
+                new google.maps.LatLng(23.799332, 90.423288),
+                new google.maps.LatLng(23.799427, 90.423879),
+                new google.maps.LatLng(23.799798, 90.423814),
+                new google.maps.LatLng(23.799968, 90.424651),
+                new google.maps.LatLng(23.799490, 90.424701),
+            ]
+        });
+
+    }
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+    <div id="map_canvas" style="width: 100%; height: 100%;" />
+</body>
+</html>
